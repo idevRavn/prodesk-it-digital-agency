@@ -1,3 +1,24 @@
+/* ── CSS VARIABLES ── */
+:root {
+  --bg: #f5f2eb;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #ffcf68;
+  --border: #e0dbd0;
+  --card-bg: #f5f2eb;
+}
+
+[data-theme="dark"] {
+  --bg: #0d0d0d;
+  --surface: #161616;
+  --text: #f0ece4;
+  --muted: #888888;
+  --accent: #ffcf68;
+  --border: #2a2a2a;
+  --card-bg: #1a1a1a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +27,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f5f2eb;
-  color: #111111;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* ── NAVBAR ── */
@@ -17,8 +38,8 @@ body {
   justify-content: space-between;
   padding: 0 5%;
   height: 68px;
-  background: #ffffff;
-  border-bottom: 1px solid #e0dbd0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
 
   /* Sticky Navbar */
   position: fixed;
@@ -32,11 +53,11 @@ body {
   font-size: 1.3rem;
   font-weight: 800;
   text-decoration: none;
-  color: #111111;
+  color: var(--text);
 }
 
 .logo span {
-  color: #ffcf68;
+  color: var(--accent);
 }
 
 .nav-links {
@@ -48,13 +69,29 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #666666;
+  color: var(--muted);
   font-size: 1rem;
   font-weight: 500;
 }
 
 .nav-links a:hover {
-  color: #ffcf68;
+  color: var(--accent);
+}
+
+/* ── TOGGLE BUTTON ── */
+#theme-toggle {
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  padding: 0.4rem 0.4rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+#theme-toggle:hover {
+  border-color: var(--accent);
 }
 
 /* ── HERO ── */
@@ -63,7 +100,7 @@ body {
   display: flex;
   align-items: center;
   padding: 100px 5% 60px;
-  background: #f5f2eb;
+  background: var(--bg);
   overflow: hidden;
 }
 
@@ -77,17 +114,17 @@ body {
   line-height: 1.1;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  color: #111111;
+  color: var(--text);
   word-break: break-word;
 }
 
 .hero h1 span {
-  color: #ffcf68;
+  color: var(--accent);
 }
 
 .hero-sub {
   font-size: clamp(0.9rem, 3.5vw, 1.1rem);
-  color: #666666;
+  color: var(--muted);
   max-width: 500px;
   line-height: 1.7;
   margin-bottom: 2.5rem;
@@ -95,8 +132,8 @@ body {
 
 .btn-primary {
   display: inline-block;
-  background: #ffcf68;
-  color: #111111;
+  background: var(--accent);
+  color: var(--text);
   text-decoration: none;
   padding: 1rem 2.2rem;
   border-radius: 50px;
@@ -117,18 +154,18 @@ body {
 /* ── SERVICES ── */
 .services {
   padding: 80px 5%;
-  background: #ffffff;
+  background: var(--surface);
 }
 
 .services h2 {
   font-size: 2rem;
   font-weight: 800;
-  color: #111111;
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
 .services-sub {
-  color: #666666;
+  color: var(--muted);
   font-size: 1rem;
   margin-bottom: 3rem;
 }
@@ -140,8 +177,8 @@ body {
 }
 
 .card {
-  background: #f5f2eb;
-  border: 1px solid #e0dbd0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 16px;
   padding: 2rem;
   transition:
@@ -165,20 +202,20 @@ body {
 .card h3 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #111111;
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
 .card p {
   font-size: 0.9rem;
-  color: #666666;
+  color: var(--muted);
   line-height: 1.6;
 }
 
 /* ── FOOTER ── */
 footer {
   background: #111111;
-  color: #ffffff;
+  color: var(--surface);
   padding: 2.5rem 5%;
   display: flex;
   align-items: center;
@@ -188,7 +225,7 @@ footer {
 }
 
 .footer-left .logo {
-  color: #ffffff;
+  color: #f0ece4;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   display: inline-block;
@@ -196,7 +233,7 @@ footer {
 
 .footer-left p {
   font-size: 0.82rem;
-  color: #888888;
+  color: var(--muted);
   margin-top: 0.4rem;
 }
 
@@ -206,7 +243,7 @@ footer {
 }
 
 .social-links a {
-  color: #888888;
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
@@ -214,5 +251,5 @@ footer {
 }
 
 .social-links a:hover {
-  color: #ffcf68;
+  color: var(--accent);
 }
