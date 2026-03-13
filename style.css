@@ -106,3 +106,64 @@ body {
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 8px 30px rgba(255, 207, 104, 0.4);
 }
+
+/* ── SERVICES ── */
+.services {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.services h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+.services-sub {
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: #f5f2eb;
+  border: 1px solid #e0dbd0;
+  border-radius: 16px;
+  padding: 2rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
+}
