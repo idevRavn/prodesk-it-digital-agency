@@ -6,10 +6,10 @@ toggle.addEventListener("click", () => {
 
   if (html.dataset.theme === "dark") {
     html.dataset.theme = "light";
-    toggle.textContent = "🌚";
+    toggle.textContent = "🌙";
   } else {
     html.dataset.theme = "dark";
-    toggle.textContent = "🌞";
+    toggle.textContent = "☀️";
   }
 });
 
